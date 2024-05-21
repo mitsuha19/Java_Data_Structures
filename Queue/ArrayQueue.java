@@ -38,12 +38,12 @@ public class ArrayQueue<E> implements Queue<E> {
         if (size() == array.length) {
             throw new RuntimeException("Array Queue is Full");
         }
-        if (front == -1) {
+        if (front == -1) 
             front = 0;
             back = (back + 1) % DEFAULT_CAPACITY;
             array[back] = e;
             queueSize++;
-        }
+        
     }
 
     public  E dequeue() {
